@@ -20,8 +20,8 @@ const todoSlice = createSlice({
         addTodo:(state, action) => {
             const todo = {
                 id: nanoid,
-                todo: action.payload,
-                isComplete: false
+                ...action.payload
+                
             }
             state.todos.push(todo)
         },
